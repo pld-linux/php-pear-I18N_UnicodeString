@@ -14,7 +14,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	251d67d3463af5768ece323b6c7c4336
 URL:		http://pear.php.net/package/I18N_UnicodeString/
-BuildRequires:	rpm-php-pearprov >= 4.0.2-98
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -36,18 +36,19 @@ znaków jednobajtowych, takich jak UTF-8 czy encje HTML.
 Ta klasa ma w PEAR status: %{_status}.
 
 %prep
-%setup -q -c
+%pear_package_setup
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-
-install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}
+%pear_package_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/examples
+%doc install.log
+%doc docs/%{_pearname}/examples
+%{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php
