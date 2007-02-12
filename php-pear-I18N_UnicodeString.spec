@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - provides a way to work with self contained multibyte strings
-Summary(pl):	%{_pearname} - sposób pracy z samodzielnymi ³añcuchami znaków wielobajtowych
+Summary(pl.UTF-8):   %{_pearname} - sposÃ³b pracy z samodzielnymi Å‚aÅ„cuchami znakÃ³w wielobajtowych
 Name:		php-pear-%{_pearname}
 Version:	0.2.1
 Release:	1
@@ -29,11 +29,11 @@ entities.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Ta klasa dostarcza metodê zapisu i obróbki ³añcuchów znaków
-wielobajtowych w PHP bez u¿ywania rozszerzenia mbstring. Umo¿liwia
-tak¿e konwersjê miêdzy ró¿nymi metodami zapisu Unikodu w ³añcuchach
-znaków jednobajtowych, takich jak UTF-8 czy encje HTML.
+%description -l pl.UTF-8
+Ta klasa dostarcza metodÄ™ zapisu i obrÃ³bki Å‚aÅ„cuchÃ³w znakÃ³w
+wielobajtowych w PHP bez uÅ¼ywania rozszerzenia mbstring. UmoÅ¼liwia
+takÅ¼e konwersjÄ™ miÄ™dzy rÃ³Å¼nymi metodami zapisu Unikodu w Å‚aÅ„cuchach
+znakÃ³w jednobajtowych, takich jak UTF-8 czy encje HTML.
 
 Ta klasa ma w PEAR status: %{_status}.
 
