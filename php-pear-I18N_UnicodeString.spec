@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - provides a way to work with self contained multibyte strings
-Summary(pl.UTF-8):   %{_pearname} - sposób pracy z samodzielnymi łańcuchami znaków wielobajtowych
+Summary(pl.UTF-8):	%{_pearname} - sposób pracy z samodzielnymi łańcuchami znaków wielobajtowych
 Name:		php-pear-%{_pearname}
 Version:	0.2.1
 Release:	1
