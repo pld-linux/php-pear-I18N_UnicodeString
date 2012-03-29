@@ -5,11 +5,12 @@ Summary:	%{pearname} - provides a way to work with self contained multibyte stri
 Summary(pl.UTF-8):	%{pearname} - sposób pracy z samodzielnymi łańcuchami znaków wielobajtowych
 Name:		php-pear-%{pearname}
 Version:	0.3.0
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
 # Source0-md5:	615e3f3cd9d545b16014fb69eb23dc35
+Patch0:		bug-19358.patch
 URL:		http://pear.php.net/package/I18N_UnicodeString/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -36,6 +37,7 @@ Ta klasa ma w PEAR status: %{status}.
 
 %prep
 %pear_package_setup
+%patch0 -p1
 
 mv .%{php_pear_dir}/data/I18N_UnicodeString/README .
 mv docs/%{pearname}/examples .
