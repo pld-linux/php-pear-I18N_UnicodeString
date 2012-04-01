@@ -10,7 +10,6 @@ License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
 # Source0-md5:	e7cc5ecadee585399e8d5c2b8899d574
-Patch0:		bug-19358.patch
 URL:		http://pear.php.net/package/I18N_UnicodeString/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -37,7 +36,6 @@ Ta klasa ma w PEAR status: %{status}.
 
 %prep
 %pear_package_setup
-%patch0 -p1
 
 mv .%{php_pear_dir}/data/I18N_UnicodeString/README .
 mv docs/%{pearname}/examples .
