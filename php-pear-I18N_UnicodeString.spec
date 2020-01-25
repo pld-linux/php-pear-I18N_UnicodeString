@@ -1,6 +1,5 @@
 %define		status		beta
 %define		pearname	I18N_UnicodeString
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - provides a way to work with self contained multibyte strings
 Summary(pl.UTF-8):	%{pearname} - sposób pracy z samodzielnymi łańcuchami znaków wielobajtowych
 Name:		php-pear-%{pearname}
